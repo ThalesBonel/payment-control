@@ -33,7 +33,9 @@ describe("Mutation - Login", () => {
   });
 
   it.only("Não deve realizar login com sucesso quando informo email em branco", async () => {
-    const resposta = await login(loginData.userEmailEmBranco);
+    const usuario = { ...loginData.admin, email: "" };
+
+    const resposta = await login(usuario);
 
     expect(resposta.status).to.equal(200);
     expect(resposta.body.errors[0]).to.have.property("message", "Credenciais inválidas ou usuário inativo.");

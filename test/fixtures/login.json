@@ -6,9 +6,5 @@
   "pgats": {
     "email": "pgats@turma3.com",
     "senha": "123456"
-  },
-  "userEmailEmBranco": {
-    "email": "",
-    "senha": "123456"
   }
 }
